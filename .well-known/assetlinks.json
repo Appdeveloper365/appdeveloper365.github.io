@@ -12,7 +12,7 @@
     "target": {
       "namespace": "android_app",
       "package_name": "com.appdeveloper365.omnitoolkit",
-      "sha256_cert_fingerprints": ["9D:D2:59:ED:3B:2A:5D:34:D4:42:D3:D1:DF:4E:E6:EF:EA:E3:84:CF:96:44:15:EE:93:64:22:C2:9C:EB:C7:0E"]
+      "sha256_cert_fingerprints": ["9D:D2:59:ED:3B:2A:5D:34:D4:42:D3:D1:DF:4E:E6:EF:EA:E3:84:CF:96:44:15:EE:93:64:22:C2:9C:EB:C7:0E", "4C:2B:81:A8:67:E2:B2:9A:86:05:18:11:25:BE:C8:1D:14:E5:EF:A8:9C:72:F1:B9:87:5E:EC:A7:04:E5:0F:AA"]
     }
   }
 ]
