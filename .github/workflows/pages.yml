@@ -31,6 +31,9 @@ jobs:
           source: ./
           destination: ./_site
 
+      - name: Fix _site permissions
+        run: sudo chown -R "$USER":"$USER" ./_site
+
       - name: Include app links files
         run: |
           mkdir -p ./_site/.well-known
