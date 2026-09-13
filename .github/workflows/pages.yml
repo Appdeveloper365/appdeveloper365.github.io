@@ -33,6 +33,7 @@ jobs:
 
       - name: Include app links files
         run: |
+          sudo chown -R "$(id -u):$(id -g)" ./_site
           mkdir -p ./_site/.well-known
           cp ./.well-known/assetlinks.json ./_site/.well-known/assetlinks.json
           touch ./_site/.nojekyll
