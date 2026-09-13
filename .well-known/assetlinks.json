@@ -6,5 +6,13 @@
       "package_name": "com.btim.omnitoolkit",
       "sha256_cert_fingerprints": ["BD:F0:F7:2C:87:1D:D5:A5:4C:AF:FE:43:82:41:99:93:C7:0E:7E:4C:A4:CE:76:04:2C:4A:30:2E:54:DA:E8:1D"]
     }
+  },
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.appdeveloper365.omnitoolkit",
+      "sha256_cert_fingerprints": ["9D:D2:59:ED:3B:2A:5D:34:D4:42:D3:D1:DF:4E:E6:EF:EA:E3:84:CF:96:44:15:EE:93:64:22:C2:9C:EB:C7:0E"]
+    }
   }
 ]
