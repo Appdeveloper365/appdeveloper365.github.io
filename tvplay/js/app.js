@@ -83,7 +83,7 @@
   var watchdogReloaded = false; // one automatic stream reload already attempted
   var DEFAULT_GROUPS = ['Soccer ⚽ (Free)', 'Sports • Global', 'Sports • Europe',
     'Sports • Middle East & N. Africa', 'Sports • Americas', 'Sports • Asia',
-    'News • Global', 'News • Europe', 'News • Middle East & N. Africa',
+    'News • Top Picks', 'News • Global', 'News • Europe', 'News • Middle East & N. Africa',
     'News • Americas', 'News • Sub-Saharan Africa', 'News • Asia', 'News',
     'Movies;Series', 'Documentary', 'Kids', 'Music', 'General', 'Unknown'];
 

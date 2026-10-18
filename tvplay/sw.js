@@ -5,7 +5,7 @@
  * third-party playlists are never cached — they must stay live.
  */
 
-const CACHE = 'tvplay-v8';
+const CACHE = 'tvplay-v9';
 
 const APP_SHELL = [
   './',
