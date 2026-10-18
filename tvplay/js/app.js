@@ -81,7 +81,9 @@
   var playStarted = false;      // this channel reached 'playing' at least once
   var loadWatchdog = null;      // first-load stall watchdog timer
   var watchdogReloaded = false; // one automatic stream reload already attempted
-  var DEFAULT_GROUPS = ['Soccer ⚽ (Free)', 'Sports', 'News', 'USA', 'UK', 'Canada', 'General', 'Unknown'];
+  var DEFAULT_GROUPS = ['Soccer ⚽ (Free)', 'Sports • Global', 'Sports • Europe',
+    'Sports • Middle East & N. Africa', 'Sports • Americas', 'Sports • Asia',
+    'News', 'Movies;Series', 'Documentary', 'Kids', 'Music', 'General', 'Unknown'];
 
   /**
    * Subscription-only sports brands whose "online" streams only exist as
