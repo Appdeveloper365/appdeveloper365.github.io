@@ -11,9 +11,14 @@
 
 const DEFAULT_PLAYLISTS = [
   {
-    name: 'Sports World (bundled)',      // 230+ free/FAST sports channels, worldwide
+    name: 'Soccer + Sports (bundled)',    // 237 curated free/FAST channels, worldwide
     url: 'assets/sports-world.m3u',
     group: 'Sports'
+  },
+  {
+    name: 'News World (bundled)',         // ~300 curated free news channels
+    url: 'assets/news-world.m3u',
+    group: 'News'
   },
   {
     name: 'iPTV-org Sports (live)',      // live refresh from the community index

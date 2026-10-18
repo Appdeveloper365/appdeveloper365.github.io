@@ -1,0 +1,600 @@
+#EXTM3U
+# TVPlay — curated worldwide FREE news channels (FTA broadcasters + FAST)
+# Source & app: https://appdeveloper365.github.io/tvplay/
+# No pay-TV tiers; iptv-org blocklist respected; best stream per channel.
+#EXTINF:-1 tvg-logo="" group-title="News • Americas",24 Horas
+http://187.102.208.209:8000/play/a0a1/index.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Americas",24/7 Canal de Noticias
+https://panel.host-live.com:19360/cn247tv/cn247tv.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Americas",4Dmas Noticias TV
+https://rds3.desdeparaguay.net/4dmasnoticiastv/4dmasnoticiastv/playlist.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Americas",A24
+https://g5.vxral-slo.transport.edge-access.net/a12/ngrp:a24-100056_all/playlist.m3u8?sense=true
+#EXTINF:-1 tvg-logo="" group-title="News • Americas",ABC-TV Paraguay
+https://live2.eu-north-1a.cf.dmcdn.net/sec2(vig4KUMvzIpvL_0CGgNPG2QFE6DukpwGhRZzGj8aqOyedNaDjlOwv-qe03N1Bk5-7nB-V7Uv8gBwwy2h-0TCL_WRE6IWeUWiVcnYm587YcdKpnqvQZ3tYg9iGdqpySyX)/cloud/3/x9skr3m/d/live-720.m3u8#cell=lcf2-eu-north-1a
+#EXTINF:-1 tvg-logo="" group-title="News • Americas",Acento TV
+https://acentotv01.streamprolive.com/hls/live.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Americas",Acustik TV
+https://s5.mexside.net:1936/clientetv/clientetv/playlist.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Americas",ADN 40
+https://mdstrm.com/live-stream-playlist/60b578b060947317de7b57ac.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Americas",ADN TV
+https://redirector.rudo.video/hls-video/931b584451fa6dd1313ee66efbfd5802e3f3bcea/adntv/adntv.smil/playlist.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Americas",America's Voice News
+https://jmp2.uk/plu-5e1f7da4bc7d740009831259.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Americas",AMX Noticias
+https://5e50264bd6766.streamlock.net/mexiquense2/videomexiquense2/playlist.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Americas",Atacama Noticias
+https://v2.tustreaming.cl/atacamanoticias/index.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Americas",ATV+
+https://d26l0c7cli5gzs.cloudfront.net/ts:abr.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Americas",Black News Channel
+https://blacknewschannel-vizio.amagi.tv/playlist.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Americas",Blaze Live
+https://jmp2.uk/plu-5e46fba0c43b0d00096e5ac1.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Americas",BM&C News
+https://jmp2.uk/plu-666c9c60a7efd40008f552f0.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Americas",Buendia TV
+https://servilive.com:3508/stream/play.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Americas",C9N
+https://d2b5h5wyivfnfl.cloudfront.net/live/48f53430-9014-4459-a048-6169dac14140/ts:abr.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Americas",Cablenoticias
+http://181.78.211.244:8005/play/a09u/index.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Americas",Canal 26
+https://stream-gtlc.telecentro.net.ar/hls/canal26hls/main.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Americas",Canal Caribe
+https://cdn.teveo.cu/live/video/A36pWmuWvZBQskuZ/ngrp:CKZ3s6Wuv4gDjndG.stream/playlist.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Americas",Canal I
+https://streaming.canal-i.com/canal-i/live/master.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Americas",Canal N
+http://190.108.91.206:9050/play/a0bd/index.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Americas",Canal PyC
+https://live20.bozztv.com/akamaissh101/ssh101/pyctelevision/playlist.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Americas",Carivision
+https://ss2.tvrdomi.com:1936/carivision/carivision/playlist.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Americas",CBC News Network
+https://cbcrclinear-tor.akamaized.net/hls/live/2042769/geo_allow_ca/CBCRCLINEAR_TOR_15/master5.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Americas",CDNN 23
+https://cootv.cootel.com.ni:8095/Canal23_CooTel/playlist.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Americas",CEACOM TV
+https://eu1.servers10.com:8081/ceacom/index.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Americas",Cholusat Sur 36
+http://audiotvserver.net:1935/livemedia/cholusat/playlist.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Americas",Citrico TV
+https://edge.essastream.com/citricotv/playlist.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Americas",CityNews Calgary
+https://citynewsregional.akamaized.net/hls/live/1024053/Regional_Live_8/master.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Americas",CityNews Edmonton
+https://citynewsregional.akamaized.net/hls/live/1024053/Regional_Live_8/Video-2Mbps.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Americas",CityNews Toronto
+https://citynewsregional.akamaized.net/hls/live/1024052/Regional_Live_7/master.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Americas",CityNews Vancouver
+https://citynewsregional.akamaized.net/hls/live/1024054/Regional_Live_9/master.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Americas",CNN Brasil
+https://d25usgadhphvwi.cloudfront.net/hls/main.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Americas",Conecta2TV
+https://live.obslivestream.com/conecta2/index.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Americas",Ecotel TV
+https://ecoteltv.streamseguro.com:5443/LiveApp/streams/streaming.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Americas",Guatevision
+https://mdstrm.com/live-stream-playlist/69f8df22a762c9b1ab3eabca.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Americas",HCH
+https://live.streamhch.com/live/streams/hch1.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Americas",Jovem Pan News
+https://d6yfbj4xxtrod.cloudfront.net/out/v1/7836eb391ec24452b149f3dc6df15bbd/index.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Americas",Mario Pinto TV
+https://eu1.servers10.com:8081/8028/index.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Americas",Milenio Television
+https://jmp2.uk/plu-652e922db4b047000825f975.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Americas",Norte Informativo TV
+https://videohd.live:19360/8076/8076.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Americas",Noticias RCN
+https://jmp2.uk/plu-67d9b0ebc290c9499046e88f.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Americas",Plus TV
+https://vcp4.myplaytv.com:1936/plustv/plustv/playlist.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Americas",Prensa Latina TV
+https://eu1.servers10.com:8081/8192/index.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Americas",Radio Ancon
+https://www.streaming507.net:19360/anconvideo/anconvideo.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Americas",Radio Isla TV
+https://59a564764e2b6.streamlock.net/palestra/palestra/playlist.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Americas",Record News
+https://playplusnews-lh.akamaihd.net/i/pp_nws@377849/master.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Americas",RTU
+https://video1.makrodigital.com/rtu/rtu/chunks.m3u8?nimblesessionid=
+#EXTINF:-1 tvg-logo="" group-title="News • Americas",Telesur
+https://mblenmain01.telesur.ultrabase.net/mblivev3/480p/playlist.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Americas",TN23
+https://d3qt8k30mpy8xx.cloudfront.net/ts:abr.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Americas",Tribuna TV
+https://cloudflare.streamgato.us:3300/live/tribunatvlive.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Americas",TVM El Salvador
+http://201.247.102.189/tmp_hls/stream/index.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Americas",UMSA TVU LP
+https://edge.enhdtv.com/8190/index.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Americas",UN24
+https://59d39900ebfb8.streamlock.net/untv-720/untv-720/playlist.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Americas",Unifranz
+https://edge.enhdtv.com/8192/index.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Asia",13 Siam Thai
+https://live.x2.co.th/live/13livetv-th.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Asia",24 News HD
+https://cdn4.mjunoon.tv:8087/streamtest/146M/chunks.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Asia",24KZ
+https://fs.uplink.kz/24KZ/mono.m3u8?token=onlinetv
+#EXTINF:-1 tvg-logo="" group-title="News • Asia",2GB
+https://2gblive.akamaized.net/hls/live/2033805/2GB/index.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Asia",365 News
+https://cdn4.mjunoon.tv:8087/streamtest/140M/chunks.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Asia",3AW
+https://3awlive.akamaized.net/hls/live/2032295/3AW/index.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Asia",6 TV Telugu
+https://yuppparoriglin.akamaized.net/181224/smil:6tv.smil/playlist.m3u8?hdnts=st=1735898689~exp=1835898688~acl=*~hmac=f5fe24724fe05481e3841f9eb5ab8efdee0a3dd83645ae9dcf45703f525bab7b
+#EXTINF:-1 tvg-logo="" group-title="News • Asia",6PR
+https://6prlive.akamaized.net/hls/live/2033806/6PR/index.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Asia",7 News
+https://sscsott.com/7news/live/index.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Asia",92 News HD
+http://92news.vdn.dstreamone.net/92newshd/92hd/playlist.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Asia",Aaj Tak
+https://d1rc86nwwc9fag.cloudfront.net/vglive-sk-791258/master.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Asia",Abante TV
+https://amg19223-amg19223c12-amgplt0352.playout.now3.amagi.tv/playlist/amg19223-amg19223c12-amgplt0352/playlist.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Asia",ABP Ananda
+https://d2l4ar6y3mrs4k.cloudfront.net/live-streaming/ananda-livetv/master.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Asia",ABP Asmita
+https://d2l4ar6y3mrs4k.cloudfront.net/live-streaming/asmita-livetv/master.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Asia",ABP Ganga
+https://d2l4ar6y3mrs4k.cloudfront.net/live-streaming/ganga-livetv/master.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Asia",ABP Majha
+https://yupprestreamliveus.akamaized.net/vglive-sk-355289/majha/master.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Asia",Afrik Info TV
+https://kali.vdopanel.com:3119/hybrid/play.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Asia",Al Masar TV
+https://starmenajo.com/hls/almasar/index.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Asia",Ala-Too 24
+https://st2.mediabay.tv/KG_KTRK-Ala-too/playlist.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Asia",AnewZ TV
+https://53be5ef2d13aa.streamlock.net/cubesanewz-secure/smil:cubesanewz-secure-web.smil/playlist.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Asia",APA Tv
+http://stream.apa.tv/apastream/index.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Asia",Baku.TV
+https://rtmp.baku.tv/hls/bakutv.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Asia",Baraka Television
+https://stream.berosat.live:19360/baraka-hd/baraka-hd.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Asia",Berita RTM
+https://d25tgymtnqzu8s.cloudfront.net/smil:berita/playlist.m3u8?id=5
+#EXTINF:-1 tvg-logo="" group-title="News • Asia",BeritaSatu
+https://xtdslboppkkv-pull.bpmedialive.com/live/beritasatu/abr.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Asia",Bilyonaryo News Channel
+https://amg19223-amg19223c11-amgplt0352.playout.now3.amagi.tv/playlist/amg19223-amg19223c11-amgplt0352/playlist.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Asia",BN Channel
+https://flv.intechmedia.net/live/ch112.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Asia",Brian TV
+https://livefta.malimarcdn.com/ftaedge00/briantv.sdp/playlist.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Asia",BTV
+https://op-group1-swiftservehd-1.dens.tv/h/h129/S4/mnf.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Asia",BTV News
+https://live-evg2.tv360.metfone.com.kh/livetest/bayontest.stream/playlist.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Asia",CNBC Mongolia
+https://cdn4.skygo.mn/live/disk1/CNBC/HLSv3-FTA/CNBC.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Asia",CNN Indonesia
+https://video.detik.com/livecnn/smil:cnntv/chunklist_w268557525_b384000_sleng.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Asia",CTS News
+http://seb.sason.top/sc/hsxw_fhd.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Asia",DBC News
+http://tvn3.chowdhury-shaheb.com/dbc/index.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Asia",Dong Nai TV 1
+http://118.107.85.4:1935/live/smil:DNTV1.smil/chunklist.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Asia",DVB TV
+https://live-stream.dvb.no/hls/stream_src/index.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Asia",EAC News TV
+https://live.eac-news.com/LiveApp/streams/eacnews.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Asia",Eagle News
+https://cdn4.skygo.mn/live/disk1/Eagle/DASH-FTA/Eagle.mpd
+#EXTINF:-1 tvg-logo="" group-title="News • Asia",EBC Financial News
+http://seb.sason.top/sc/dscjxw_fhd.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Asia",EBC News
+http://seb.sason.top/sc/dsxw_fhd.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Asia",Ekushey TV
+https://ekusheyserver.com/etvlivesn.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Asia",Espace TV
+https://edge11.vedge.infomaniak.com/livecast/ik:espacetv/manifest.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Asia",ETV
+https://cdn4.skygo.mn/live/disk1/ETV/DASH-FTA/ETV.mpd
+#EXTINF:-1 tvg-logo="" group-title="News • Asia",First Channel News
+https://amtvusdvr.tulix.tv/am3abr/index.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Asia",Formula
+https://c4635.cdn.xsg.ge/c4635/TVFormula/index.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Asia",Fresh News
+http://streaming-android.freshnewsasia.tv:1935/live/ngrp:myStream_all/playlist.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Asia",Guardian Talk Radio
+https://cdn-edge1.streamcomedia.com/abr_tngr969fm/abr-tngr969fm_streams/playlist.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Asia",Gugbang TV
+http://mediaworks.dema.mil.kr:1935/live_edge/cudo.sdp/playlist.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Asia",Haiti News Channel
+https://cdn.haititivi.com/website/haitinews/index.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Asia",HTV9
+https://dethich.pw/htv9/index.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Asia",i24NEWS Arabic
+https://hlspackager.akamaized.net/live/DB/i24_ARABIC/HLS/i24_ARABIC.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Asia",i24NEWS English World
+https://hlspackager.akamaized.net/live/DB/i24_ENGLISH/HLS/i24_ENGLISH.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Asia",i24NEWS French
+https://bcovlive-a.akamaihd.net/41814196d97e433fb401c5e632d985e9/eu-central-1/5377161796001/playlist.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Asia",JKN 18
+https://lb1-live-mv.v2h-cdn.com/hls/ffda/jkn18/jkn18.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Asia",Kin24
+http://51.254.199.122:8080/kin24/index.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Asia",Kohavision
+https://gjirafa-video-live.gjirafa.net/gjvideo-livestream/lj9-pxm-o53-rp0/tracks-v4a1/mono.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Asia",Le Monde en 24h
+https://stream.berosat.live/hls/monde24h-tv-index/monde24h-tv-index.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Asia",Monaco Info
+https://webtv.monacoinfo.com/live/prod/index.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Asia",MRTV News
+https://mrtvott.com/cache/MRTV-NEWS-HD/master.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Asia",NAN TV
+https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/nantv.stream/live-orgin/nantv.stream/playlist.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Asia",Nation TV
+https://live-us1.thaimomo.com/live-as/chNation-3/playlist.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Asia",News 21 Bangla TV
+http://103.190.133.68:1935/news21live/live/playlist.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Asia",NewsWorld
+https://amg01076-lightning-amg01076c5-rakuten-us-1788.playouts.now.amagi.tv/playlist/amg01076-lightning-newsworld-rakutenus/playlist.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Asia",NW Info
+https://hls.newworldtv.com/nw-info/video/live.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Asia",NW Info 2
+https://hls.newworldtv.com/nw-info-2/video/live.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Asia",O'zbekiston 24
+https://stream8.cinerama.uz/1011/tracks-v1a1/playlist.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Asia",Obieqtivi TV
+https://live20.bozztv.com/dvrfl05/gin-obieqtivitv/index.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Asia",Phoenix InfoNews Channel
+http://223.110.245.167/ott.js.chinamobile.com/PLTV/3/224/3221226923/index.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Asia",PSM News
+https://customer-ujex1meek7koqd9x.cloudflarestream.com/21262545317dadfa20dab4f9bd37c7c2/manifest/video.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Asia",RTHK TV 35
+https://rthktv35-live.akamaized.net/hls/live/2101643/RTHKTV35/master.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Asia",RTM ASEAN
+https://d25tgymtnqzu8s.cloudfront.net/event/smil:event1/chunklist_b2596000_slENG.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Asia",Sahara 24
+https://live.saharamedias.net:3317/live/shara24live.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Asia",TDM Information
+https://live3.tdm.com.mo/ch5/info_ch5.live/playlist.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Asia",TOLOnews
+https://tgn.bozztv.com/eshgtv-dvrfl05/gin-tolonews/index.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Asia",Tra Vinh TV
+https://freem3u.xyz/api/live/play.m3u8?vid=91
+#EXTINF:-1 tvg-logo="" group-title="News • Asia",TV Arta
+https://gjirafa-video-live.gjirafa.net/gjvideo-live/mps-vgx-u9p-qv1/index.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Asia",TVMnews+
+http://80.79.6.221:25461/smash/public/20
+#EXTINF:-1 tvg-logo="" group-title="News • Asia",UzReport TV
+https://stream8.cinerama.uz/1015/tracks-v1a1/playlist.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Asia",Vouli TV
+https://dev.aftermind.xyz/edge-hls/unitrust/voulitv/index.m3u8?token=8TXWzhY3h6jrzqEqx
+#EXTINF:-1 tvg-logo="" group-title="News • Asia",VTV
+https://vtvstream.vnews.mv/vtvlive/vmedia/playlist.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Europe",100% NEWS
+http://85.238.112.40:8810/hls_sec/239.33.16.32-.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Europe",24 Kanal
+https://cdn15.live-tv.cloud/ua_infinitas_tv/news24-abr/playlist.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Europe",360° News
+https://edge-tv-ll.facecast.io/evacoder_hls_hi/UBZfFgtKB1JwTwoDERNQVGGs/index.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Europe",3Cat Exclusiu 1
+https://directes-tv-cat.3catdirectes.cat/live-content/oca1-hls/master.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Europe",3Cat Exclusiu 2
+https://directes-tv-cat.3catdirectes.cat/live-content/oca2-hls/master.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Europe",:24
+http://88.212.15.17/live/test_trojka_25p/playlist.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Europe",Actualidad 360
+https://amg01821-lovetv-amg01821c27-lg-es-6726.playouts.now.amagi.tv/playlist/amg01821-lovetvfast-lovenews-lges/playlist.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Europe",Adnkronos
+https://5e73cf528f404.streamlock.net/GR_sport/livestream/playlist.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Europe",Afghanistan International
+https://hls.afintl.com/hls/stream.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Europe",Aleph News
+https://stream-aleph.m.ro/Aleph/ngrp:Alephnewsmain.stream_all/playlist.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Europe",Alert TV
+https://itv.streams.ovh/ALEERT/ALEERT/playlist.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Europe",Antena 3 CNN
+https://live4dai.antenaplay.ro/live2_aws4_sdi11/live2_aws4_sdi11_600k.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Europe",Antik Info TV
+https://dash4.antik.sk/live/test_infokanal_tizen/playlist.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Europe",Apostrophe TV
+https://ext.cdn.nashnet.tv/228.0.2.165/index.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Europe",Astra TV
+https://server.gointernet.gr/live/livestream.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Europe",Astrahan 24
+https://streaming.astrakhan.ru/astrakhan24/playlist.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Europe",Aznews TV
+https://edge1.socialsmart.tv/aznews/smil/playlist.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Europe",B1
+https://hls02ns.antenaplay.ro/hls/b1-tv-hd/index.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Europe",BBC Arabic
+https://vs-cmaf-pushb-ww-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_arabic_tv/pc_hd_abr_v2.mpd
+#EXTINF:-1 tvg-logo="" group-title="News • Europe",BBC News
+https://vs-cmaf-push-ww-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_news_channel_hd/iptv_hd_abr_v1.mpd
+#EXTINF:-1 tvg-logo="" group-title="News • Europe",BBC Persian
+https://vs-cmaf-pushb-ww-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_persian_tv/pc_hd_abr_v2.mpd
+#EXTINF:-1 tvg-logo="" group-title="News • Europe",Belarus-24
+https://ngtrk.dc.beltelecom.by/ngtrk/smil:belarus24.smil/playlist.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Europe",BFM2
+https://d1ib1gsg71oarf.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-scp7wda722jph/BFM2_FR.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Europe",BTB Info
+https://emisja2.btb.j00r.us/iptv/session/4/hls.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Europe",Bulgaria On Air
+http://213.91.179.28:8000/play/a05x
+#EXTINF:-1 tvg-logo="" group-title="News • Europe",CNBC UK
+https://amg01079-nbcuuk-amg01079c2-lg-gb-2030.playouts.now.amagi.tv/playlist.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Europe",CNN Portugal
+https://github.com/thomraider12/canaistvpt/raw/main/m3u8s/cnnpt.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Europe",CNN Prima News
+http://88.212.15.17/live/test_cnn_pirma_news/playlist.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Europe",Crimea 24
+https://cdn.1tvcrimea.ru/24tvcrimea.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Europe",CT24
+http://88.212.15.17/live/test_ct24_hevc/playlist.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Europe",Current Time TV
+https://rfe-ingest.akamaized.net/hls/live/2033043/tvmc05/master.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Europe",Di TV
+https://cdn0-03837-liveedge0.dna.ip-only.net/03837-liveedge0/smil:03837-tx4/playlist.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Europe",Don 24
+https://donmedia.bonus-tv.ru/cdn/donmedia/playlist.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Europe",Dunya News UK
+https://ukintl.dunyanews.tv/liveuk/ngrp:dunyalive_all/playlist.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Europe",Etna Espresso Channel
+https://5db313b643fd8.streamlock.net/Etnachannelponte/Etnachannelponte/playlist.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Europe",Expressen TV
+https://cdn0-03837-liveedge0.dna.ip-only.net/03837-liveedge0/smil:03837-tx2/playlist.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Europe",HLN Live
+https://dpg-eventstreams.akamaized.net/hlnlivesrt-xmr/streamx/hlnlivesrt_720p.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Europe",HRT 4
+https://bpcdnmanprod.nexttv.ht.hr/bpk-tv/HRT4/default/index.mpd
+#EXTINF:-1 tvg-logo="" group-title="News • Europe",Iran International
+https://hlspackager.akamaized.net/live/DB/IRAN_INTERNATIONAL/HLS/IRAN_INTERNATIONAL.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Europe",Leman Bleu
+http://livevideo.infomaniak.com/streaming/livecast/naxoo/playlist.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Europe",LRT Radijas
+https://stream-live.lrt.lt/radijas/master.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Europe",M-Net Info
+https://live.mnet.mk/hls/mnet-info.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Europe",M1
+http://88.212.15.17/live/test_m_1_hungary_1200_atk/playlist.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Europe",MTV Uutiset
+https://live.streaming.a2d.tv/asset/20025962.isml/.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Europe",Nachrichten 360
+https://cdn-apse1-prod.tsv2.amagi.tv/linear/amg01821-lovetvfast-nachrichten360-samsungde/playlist.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Europe",News 24
+https://tv.balkanweb.com/news24/livestream/playlist.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Europe",NH
+https://takeoff.jetstre.am/?account=nhnieuws&file=live&output=playlist.m3u8&protocol=https&service=wowza&type=live
+#EXTINF:-1 tvg-logo="" group-title="News • Europe",Nopola News
+https://virta2.nopolanews.fi:8443/live/smil:Stream1.smil/playlist.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Europe",Nova News
+http://213.91.179.28:8000/play/a063
+#EXTINF:-1 tvg-logo="" group-title="News • Europe",ntv
+https://protokolldns.xyz/ntv.l.i.v.e5547892023/index.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Europe",Ora News
+https://live1.mediadesk.al/oranews.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Europe",Ost West
+http://hls127.freeott.top:8080/OstWest/video.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Europe",Ost West 24
+http://stream.mcquack.net/455/index.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Europe",OTV
+https://stream.agatin.hr:3559/live/otvlive.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Europe",Perviy Informationniy
+https://ngtrk.dc.beltelecom.by/ngtrk/smil:informacionnyy.smil/playlist.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Europe",PRO TV Chisinau
+https://stream.protv.md/live/sursa-1/index.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Europe",Rai News 24
+https://d3k8wzt41aflvx.cloudfront.net/RAINEWS24/Live.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Europe",Realitatea TV
+https://realitatealive.md/tv/rlive.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Europe",RTP Noticias
+https://streaming-live.rtp.pt/livetvhlsDVR/rtpnHDdvr.smil/playlist.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Europe",RTS Info
+https://rtsinfo-d.akamaized.net/out/v1/2b7ae2e1ba3f43c6aba15bced153baf5/index.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Europe",SIC Noticias
+https://sicnot.live.impresa.pt/sicnot.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Europe",Star Kentrikis Elladas
+https://telmaco-cdn.akamaized.net/starcgr/default/index.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Europe",Sterk TV
+https://hlspackager.akamaized.net/live/DB/STERK_TV/HLS/STERK_TV.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Europe",TGCom24
+https://live2-mediaset-it.akamaized.net/Content/hls_h0_clr_vos/live/channel(kf)/index.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Europe",Trailers
+https://amg01821-lovetvchannels-lovemagazineuk-samsungse-p1sf1.amagi.tv/playlist/amg01821-lovetvchannels-lovemagazineuk-samsungse/playlist.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Europe",TV Jadran
+https://tvjadran.stream.agatin.hr:3412/live/tvjadranlive.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Europe",TV8
+http://315e5a5d.ottrast.com/iptv/8KSD5KFDXA6H88/2454/index.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Europe",tv9 Telemaremma
+https://rtmp-live-ingest-us-east-1-universe-dacast-com.akamaized.net/transmuxv1/streams/2095a288-1384-ed2e-5da0-278ccbb72295.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Europe",Visir
+https://live.visir.is/hls-live/visir.smil/playlist.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Europe",WELT
+https://dash4.antik.sk/live/test_welt_tizen/playlist.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Global",ABC News Live
+https://jmp2.uk/plu-6508be683a0d700008c534e4.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Global",ABC News Live 1
+https://abcnews-streams.akamaized.net/hls/live/2023560/abcnewshudson1/master.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Global",Africanews English
+https://c3c275b999764df8a2dd55ffe2996818.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-6576/bitok/eyJzdGlkIjoiOTU0NDAyODQtOTU0My00Yzc2LThmZjQtNDRhY2YwYmQxYTYwIiwibWt0IjoicGwiLCJjaCI6NjYwNiwicHRmIjo1fQ==/26036/africanews-en.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Global",Africanews French
+https://cdn-euronews.akamaized.net/live/eds/africanews-fr/25050/index.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Global",Al Hadath
+https://av.alarabiya.net/alarabiapublish/alhadath.smil/playlist.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Global",Al Jazeera
+https://live-hls-apps-aja-fa.getaj.net/AJA/01.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Global",Al Jazeera Mubasher
+https://live-hls-apps-ajm-fa.getaj.net/AJM/index.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Global",Al Jazeera Mubasher 24
+https://live-hls-apps-ajm24-fa.getaj.net/AJM24/index.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Global",Al Jazeera Mubasher Broadcast 2
+https://live-hls-apps-ajm2-fa.getaj.net/AJM2/index.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Global",Arirang TV
+https://amdlive-ch01-ctnd-com.akamaized.net/arirang_1ch/smil:arirang_1ch.smil/playlist.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Global",Arirang UN
+https://amdlive-ch02-ctnd-com.akamaized.net/arirang_2ch/smil:arirang_2ch.smil/playlist.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Global",CBS News 24/7
+https://jmp2.uk/plu-6350fdd266e9ea0007bedec5.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Global",CBS News Baltimore
+https://jmp2.uk/plu-60f75919718aed0007250d7a.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Global",CBS News Bay Area
+https://jmp2.uk/plu-5eb1afb21486df0007abc57c.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Global",CBS News Boston
+https://jmp2.uk/plu-5eb1af2ad345340008fccd1e.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Global",CGTN
+https://amg00405-rakutentv-cgtn-rakuten-i9tar.amagi.tv/master.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Global",CGTN French
+https://amg01314-cgtn-amg01314c2-rakuten-us-1319.playouts.now.amagi.tv/cgtn-fr-rakuten/playlist.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Global",CGTN Spanish
+https://amg01314-cgtn-amg01314c3-rakuten-uk-1318.playouts.now.amagi.tv/cgtn-es-rakuten/playlist.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Global",CNA
+https://d2e1asnsl7br7b.cloudfront.net/7782e205e72f43aeb4a48ec97f66ebbe/index.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Global",CNA International
+https://mumt05.tangotv.in/87NeALx2CNA/index.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Global",DW
+https://dwamdstream103.akamaized.net/hls/live/2015526/dwstream103/master.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Global",Euronews
+https://cdn-euronews.akamaized.net/live/eds/euronews-pl/26382/index.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Global",Euronews Bulgaria
+http://213.91.179.28:8000/play/a05e
+#EXTINF:-1 tvg-logo="" group-title="News • Global",Euronews English
+https://jmp2.uk/plu-61de96114757070008d33cae.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Global",Euronews French
+https://2f6c5bf4.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/UmxheHhUVi1ldV9FdXJvbmV3c0ZyYW5jYWlzX0hMUw/playlist.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Global",Euronews Georgia
+http://nue01-edge01.itdc.ge/euronewsgeorgia/mpegts
+#EXTINF:-1 tvg-logo="" group-title="News • Global",Euronews German
+https://jmp2.uk/plu-6639d7d4b18d700008da5316.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Global",GB News
+https://amg01076-lightningintern-gbnewsau-samsungau-et7fz.amagi.tv/playlist/amg01076-lightningintern-gbnewsau-samsungau/playlist.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Global",Newsmax Balkans
+https://newsmaxadria.mts-si.tv/newsmaxadria/index.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Global",Newsmax Polska
+http://91.228.35.249:8001/1:0:1:1C8A:1CE8:71:820000:0:0:0
+#EXTINF:-1 tvg-logo="" group-title="News • Global",NHK World-Japan
+https://nhk.lls.pbs.org/index.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Global",Sky News Arabia
+https://live-stream.skynewsarabia.com/c-horizontal-channel/horizontal-stream/index.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Middle East & N. Africa",24 TV
+https://tv.ensonhaber.com/tv24/tv24.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Middle East & N. Africa",360
+https://turkmedya-live.ercdn.net/tv360/tv360.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Middle East & N. Africa",A Haber
+https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/ahaber/ahaber.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Middle East & N. Africa",Al Alam
+https://live2.alalam.ir/alalam.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Middle East & N. Africa",Al Alam Al Yawm
+https://mn-nl.mncdn.com/mekameleen/smil:mekameleentv.smil/chunklist_b928000.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Middle East & N. Africa",Al Arabiya English
+https://live.alarabiya.net/alarabiapublish/english/playlist_dvr.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Middle East & N. Africa",Al Arabiya Programs
+https://live.alarabiya.net/alarabiapublish/aaprograms.smil/playlist.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Middle East & N. Africa",Al Ekhbariya
+https://cdn-globecast.akamaized.net/live/eds/al_ekhbariya/hls_roku/index.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Middle East & N. Africa",Al Ghad TV
+https://eazyvwqssi.erbvr.com/alghadtv/alghadtv.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Middle East & N. Africa",Al Mashhad
+https://amg30483-amg30483c23-amgplt0794.playout.now3.amagi.tv/ts-ap-s1-n1/playlist/amg30483-amg30483c23-amgplt0794/playlist.m3u8?ads.appversion=[APP_VERSION]&ads.devicemodel=[DEVICE_MODEL]&ads.lat=[LMT]&ads.bundleid=[APP_BUNDLE]&ads.donotsell=[DNS]&ads.ifa=[IFA]&ads.targetad=[TARGETAD_ALLOWED]&ads.appstoreurl=[APP_STOREURL]&ads.deviceid=[DEVICE_ID]&ads.devicemake=[DEVICE_MAKE]&ads.devicetype=[DEVICE_TYPE]&ads.gdpr=[GDPR]&ads.gdprconsent=[GDPR_CONSENT]&ads.ifatype=[IFA_TYPE]&ads.ip=[IP]&ads.appname=[APP_NAME]&ads.country=[COUNTRY]&ads.fck=[FCK]&ads.givn=[NONCE]&ads.ua=[UA]&ads.usprivacy=[US_PRIVACY]&ads.viewsize=[VIEWSIZE]&ads.coppa=0&ads.ic=[IC]&ads.network_name=[networkname]
+#EXTINF:-1 tvg-logo="" group-title="News • Middle East & N. Africa",Al Masirah
+https://live.cdnbridge.tv/Almasirah/Almasirah_all/playlist.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Middle East & N. Africa",Al Masirah Mubacher
+https://live2.cdnbridge.tv/AlmasirahMubasher/Mubasher_All/playlist.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Middle East & N. Africa",Al Mayadeen TV
+https://mdnlv.cdn.octivid.com/almdn/smil:mpegts.stream.smil/playlist.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Middle East & N. Africa",Al Najah News
+https://streaming.najah.edu:8443/hls/AlNajah.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Middle East & N. Africa",Al Yaum TV
+https://hlspackager.akamaized.net/live/DB/ALYAUM_TV/HLS/ALYAUM_TV.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Middle East & N. Africa",Al-Manar
+https://edge.fastpublish.me/live/index.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Middle East & N. Africa",AL24 News
+https://cdn.live.easybroadcast.io/abr_corp/66_al24_u4yga6h/corp/66_al24_u4yga6h_240p/chunks.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Middle East & N. Africa",Alalam News Channel Syria
+http://live2.alalam.ir/live/Alalam/index.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Middle East & N. Africa",Alarabiya
+https://live.alarabiya.net/alarabiapublish/alarabiya.smil/playlist.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Middle East & N. Africa",Alhaqeqa Aldawlia
+https://ghaasiflu.online/alhqeqa/index.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Middle East & N. Africa",Alikhbaria Syria
+http://185.9.2.18/chid_423/index.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Middle East & N. Africa",Almahriah TV
+https://starmenajo.com/hls/almahriah/index.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Middle East & N. Africa",Altaghier TV
+https://jmc-live.ercdn.net/altaghier/altaghier.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Middle East & N. Africa",ALWifak News TV
+http://alwifaklive.info:1935/live/myStream/playlist.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Middle East & N. Africa",AS TV
+https://live.artidijitalmedya.com/artidijital_astv/astv/playlist.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Middle East & N. Africa",DHA
+https://603c568fccdf5.streamlock.net/live/dhaweb1_C5efC/playlist.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Middle East & N. Africa",Halab Today TV
+https://halabtoday-live.lg.mncdn.com/halabtoday/livestream/playlist.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Middle East & N. Africa",Hispan TV
+https://cdnlive.presstv.ir/live/smil:live.smil/playlist.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Middle East & N. Africa",Iran Press
+https://live.presstv.ir/hls/presstv_5_482/index.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Middle East & N. Africa",Kolalnas TV
+https://htvint.mada.ps/kolalnas/index.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Middle East & N. Africa",KTV 2
+https://kwtktv2ta.cdn.mangomolo.com/ktv2/smil:ktv2.stream.smil/chunklist.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Middle East & N. Africa",KTV News
+https://cdn-globecast.akamaized.net/live/eds/ktv_al_akhbar/hls_roku/ktv_al_akhbar.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Middle East & N. Africa",Kurdistan 24
+https://hlspackager.akamaized.net/live/DB/K24/HLS/K24.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Middle East & N. Africa",Kurdsat News
+https://hlspackager.akamaized.net/live/DB/KURDSAT_NEWS/HLS/KURDSAT_NEWS.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Middle East & N. Africa",Ma'an TV
+https://htvmada.mada.ps:4443/maannews/index.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Middle East & N. Africa",Medi1TV Afrique
+https://cdn.live.easybroadcast.io/abr_corp/83_medi1tv-afrique_tm7tu45/playlist.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Middle East & N. Africa",Medi1TV Arabic
+https://cdn.live.easybroadcast.io/abr_corp/83_medi1tv-arabic_g90v4ec/playlist.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Middle East & N. Africa",Medi1TV Maghreb
+https://cdn.live.easybroadcast.io/abr_corp/83_medi1tv-maghreb_jnbspmg/playlist.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Middle East & N. Africa",Oman TV Mubashir
+https://partwota.cdn.mgmlcdn.com/omlive/smil:omlive.stream.smil/chunklist.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Middle East & N. Africa",Payam TV
+https://hlspackager.akamaized.net/live/DB/PAYAM_TV/HLS/PAYAM_TV.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Sub-Saharan Africa",7 Info
+https://video1.getstreamhosting.com:1936/8042/8042/playlist.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Sub-Saharan Africa",Advocate Broadcasting Network
+srt://105.113.54.98:4001
+#EXTINF:-1 tvg-logo="" group-title="News • Sub-Saharan Africa",Afrique Media
+https://cloud.odysee.live/content/fe06b3cdc9412e359368b2455b6ea5e93856e382/master.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Sub-Saharan Africa",Afrique54 TV
+https://video1.getstreamhosting.com:1936/8318/8318/playlist.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Sub-Saharan Africa",Balafon TV
+https://broadcasting-channels.com:9044/hls/test.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Sub-Saharan Africa",Benin Web TV
+https://stream.beninwebtv.bj/2/live/stream.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Sub-Saharan Africa",Channels 24
+https://live20.bozztv.com/dvrfl06/astv/astv-channel24africa/index.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Sub-Saharan Africa",Channels TV
+https://cs2.push2stream.com/CHANNELSTV-DVR/playlist.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Sub-Saharan Africa",Dabanga TV
+https://hls.dabangasudan.org/hls/stream.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Sub-Saharan Africa",e.tv News & Sport
+https://origin2.afxp.telemedia.co.za/abr_kapang/enterepreneur/playlist.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Sub-Saharan Africa",Filinfo TV
+https://d2iqjnqfr8pv3b.cloudfront.net/out/v1/d09d2fc718404cd8bccd3eba2444dd70/index.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Sub-Saharan Africa",HC2 TV
+https://stream.hc2tv.bj/2/live/stream.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Sub-Saharan Africa",ICONE TV
+https://lecteur.iconetv.bj/hls/stream.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Sub-Saharan Africa",LN247
+https://go5lmb6oyawb-hls-live.5centscdn.com/station/3dfd3752af3d7aec5c53992c2da3a316.sdp/playlist.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Sub-Saharan Africa",LN24SA
+https://cdnstack.internetmultimediaonline.org/ln24/ln24.stream/playlist.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Sub-Saharan Africa",Lolwe TV
+https://goliveafrica.media:9998/live/62580e144eb43/index.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Sub-Saharan Africa",Mereja TV
+https://rumble.com/live-hls-dvr/4c14o3/playlist.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Sub-Saharan Africa",SABC Lehae
+https://sabctretalh.cdn.mangomolo.com/lehae/smil:lehae.stream.smil/master.m3u8
+#EXTINF:-1 tvg-logo="" group-title="News • Sub-Saharan Africa",SunuLabel TV
+https://live3.acangroup.org:1929/publiclive/sunulabel/playlist.m3u8
