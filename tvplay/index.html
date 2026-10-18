@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TVPlay - Live TV</title>
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#0a0a0c">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="TVPlay">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/icons/icon-192.png">
+  <link rel="apple-touch-icon" href="assets/icons/icon-192.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Channel Grid / Home Screen -->
+  <div id="app" class="app">
+    <header class="app-header" role="banner">
+      <div class="header-left">
+        <h1 id="app-title">TVPlay</h1>
+      </div>
+      <div class="header-right">
+        <button id="btn-settings" class="icon-btn" aria-label="Settings" title="Settings">&#9881;</button>
+      </div>
+    </header>
+
+    <aside id="sidebar" class="sidebar" role="navigation" aria-label="Categories">
+      <ul class="category-list" id="category-list"></ul>
+    </aside>
+
+    <main class="main" role="main">
+      <div class="content">
+        <div class="toolbar">
+          <h2 id="current-category" class="category-title">All Channels</h2>
+          <div class="toolbar-actions">
+            <button id="btn-search" class="icon-btn" aria-label="Search" title="Search">&#128269;</button>
+            <button id="btn-favorites" class="icon-btn" aria-label="Favorites only" title="Favorites only">&#9733;</button>
+          </div>
+        </div>
+        <div class="search-box" id="search-box" style="display:none;">
+          <input type="text" id="search-input" placeholder="Search channels...">
+          <button id="btn-clear-search" class="icon-btn" aria-label="Clear">&#10006;</button>
+        </div>
+        <div class="channel-grid" id="channel-grid"></div>
+        <div id="empty-state" class="empty-state" style="display:none;">
+          <p>No channels found.</p>
+        </div>
+      </div>
+    </main>
+
+    <!-- Player Overlay -->
+    <div id="player-overlay" class="player-overlay hidden" role="dialog" aria-modal="true" aria-label="Live Player">
+      <video id="video" class="video" playsinline></video>
+
+      <div id="player-controls" class="player-controls hidden">
+        <div class="channel-info">
+          <img id="channel-logo" class="channel-logo" src="" alt="">
+          <div class="channel-text">
+            <h3 id="channel-title">Channel Name</h3>
+            <p id="channel-group">Group</p>
+          </div>
+        </div>
+        <div class="player-progress">
+          <div class="progress-bar-container">
+            <div id="progress-bar" class="progress-bar"></div>
+          </div>
+        </div>
+        <div class="player-actions">
+          <button id="btn-back" class="icon-btn" aria-label="Back to grid">&#9664;</button>
+          <button id="btn-play-pause" class="icon-btn" aria-label="Play/Pause">&#9654;</button>
+          <button id="btn-volume" class="icon-btn" aria-label="Mute">&#128266;</button>
+          <button id="btn-favorite-channel" class="icon-btn fav-btn" aria-label="Add to favorites">&#9733;</button>
+          <button id="btn-fullscreen" class="icon-btn" aria-label="Fullscreen">&#11452;</button>
+        </div>
+      </div>
+
+      <div id="loading-overlay" class="loading-overlay">
+        <div class="spinner"></div>
+        <p id="loading-text">Loading channel...</p>
+        <button id="btn-back-loading" class="secondary-btn hidden" title="Back to playlist">&#9664; Back to channels</button>
+      </div>
+
+      <div id="error-overlay" class="error-overlay hidden">
+        <p id="error-message">Failed to load stream.</p>
+        <button id="btn-retry" class="retry-btn">Retry</button>
+        <button id="btn-close-error" class="icon-btn">&#10006;</button>
+      </div>
+    </div>
+
+    <!-- Settings Panel -->
+    <div id="settings-panel" class="settings-panel hidden" role="dialog" aria-modal="true" aria-label="Settings">
+      <div class="settings-header">
+        <h2>Settings</h2>
+        <button id="btn-close-settings" class="icon-btn">&#10006;</button>
+      </div>
+      <div class="settings-content">
+        <h3>Playlist Sources</h3>
+        <p class="settings-desc">Add custom M3U/M3U8 playlist URLs (one per line).</p>
+        <textarea id="playlist-urls" rows="6" placeholder="https://example.com/playlist.m3u"></textarea>
+        <button id="btn-save-settings" class="primary-btn">Save &amp; Reload</button>
+        <button id="btn-reset-defaults" class="secondary-btn">Reset to Defaults</button>
+        <div class="settings-divider"></div>
+        <h3>Stream Maintenance</h3>
+        <p class="settings-desc">Probe every channel and permanently remove dead streams. Recommended after loading new playlists. Large line-ups take several minutes — the scan runs in the background.</p>
+        <button id="btn-health-scan" class="primary-btn">Scan &amp; Remove Dead Streams</button>
+        <p id="health-status" class="health-status"></p>
+        <div class="settings-divider"></div>
+        <h3>Playlist Export</h3>
+        <p class="settings-desc">Generate a self-contained <code>.m3u8</code> file from your current channel list (bundled + custom sources) and download it for use in VLC, Kodi, or any IPTV player.</p>
+        <button id="btn-export-m3u8" class="primary-btn">Export Playlist (.m3u8)</button>
+        <p id="export-status" class="health-status"></p>
+        <div class="settings-divider"></div>
+        <h3>About</h3>
+        <p>TVPlay - Personal IPTV Application</p>
+        <p>Version 1.0.0</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Diagnostics Overlay -->
+  <div id="diag-overlay" class="diag-overlay hidden">
+    <div class="diag-content">
+      <h3>Diagnostics</h3>
+      <div id="diag-video-info">Video: --</div>
+      <div id="diag-error">Error: --</div>
+      <div id="diag-status">Status: --</div>
+      <button id="btn-close-diag" class="icon-btn">&#10006;</button>
+    </div>
+  </div>
+
+  <script src="lib/hls.min.js"></script>
+  <script src="js/playlist.js"></script>
+  <script src="js/channels.js"></script>
+  <script src="js/settings.js"></script>
+  <script src="js/health.js"></script>
+  <script src="js/player.js"></script>
+  <script src="js/app.js"></script>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('sw.js').catch(function(e) {
+          console.warn('Service worker unavailable:', e.message);
+        });
+      });
+    }
+  </script>
+
+</body>
+</html>
