@@ -210,7 +210,9 @@
     showLoadingUI('Loading channels...');
     var sources = [];
     try { sources = sources.concat(window.DEFAULT_PLAYLISTS || []); } catch(e) {}
-    try { settings.getPlaylists().forEach(function(p) { sources.push({ name: p.name, url: p.url, group: p.name }); }); } catch(e) {}
+    // User-added playlists are NOT pay-filtered: bring-your-own-source
+    // works unfiltered, like any other IPTV player. Defaults stay clean.
+    try { settings.getPlaylists().forEach(function(p) { sources.push({ name: p.name, url: p.url, group: p.name, own: true }); }); } catch(e) {}
     allChannels = [];
     var errors = [];
     for (var i = 0; i < sources.length; i++) {
@@ -218,10 +220,12 @@
       try {
         var channels = await PlaylistParser.fetch(source.url);
         var paySkipped = 0;
-        channels = channels.filter(function(c) {
-          if (isPayChannel(c.name)) { paySkipped++; PAY_BLOCKED.add(c.name); return false; }
-          return true;
-        });
+        if (!source.own) {
+          channels = channels.filter(function(c) {
+            if (isPayChannel(c.name)) { paySkipped++; PAY_BLOCKED.add(c.name); return false; }
+            return true;
+          });
+        }
         if (paySkipped) console.info(source.name + ': filtered out ' + paySkipped + ' pay-channel relays.');
         channels.forEach(function(c) { if (!c.group) c.group = source.group || 'General'; if (!c.id) c.id = PlaylistParser.makeId(c.name); });
         allChannels = allChannels.concat(channels);
