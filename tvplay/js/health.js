@@ -73,14 +73,26 @@ class StreamHealth {
     const deadUrls = new Set();
     let alive = 0, dead = 0, done = 0;
     const targets = opts.force ? channels : channels.filter(c => !this.cache[c.url]);
+    const onHttps = typeof location !== 'undefined' && location.protocol === 'https:';
 
     const queue = targets.slice();
     const worker = async () => {
       while (queue.length) {
         const ch = queue.shift();
-        if (!ch) break;
-        const ok = await this.probe(ch.url);
-        this.cache[ch.url] = { alive: ok, time: Date.now() };
+        if (!ch || !ch.url) break;
+        let ok, upgraded = null;
+        const isHttp = /^http:\/\//i.test(ch.url);
+        if (onHttps && isHttp) {
+          // https pages can't load http streams (mixed content): try the
+          // https variant of the same URL and remember it when it works.
+          const candidate = ch.url.replace(/^http:/i, 'https:');
+          ok = await this.probe(candidate);
+          if (ok) upgraded = candidate;
+        } else {
+          ok = await this.probe(ch.url);
+        }
+        this.cache[ch.url] = upgraded ? { alive: true, upgraded: upgraded, time: Date.now() }
+                                      : { alive: ok, time: Date.now() };
         if (ok) alive++; else { dead++; deadUrls.add(ch.url); }
         done++;
         if (opts.onProgress) {

@@ -58,6 +58,15 @@
     onLoadingChange: function(loading) {
       if (loading) els.loadingOverlay.classList.remove('hidden');
       else els.loadingOverlay.classList.add('hidden');
+    },
+    onBuffering: function(seconds) {
+      // seconds === null → stream recovered; === 0 → just started stalling.
+      if (seconds === null || seconds === undefined) { hideBufferingChip(); return; }
+      if (!els.bufferingChip) return;
+      if (seconds < 2) { showBufferingChip('Buffering…'); return; }
+      showBufferingChip('Buffering… ' + seconds + 's');
+      // Give the viewer a hint that recovery is under way.
+      if (seconds >= 8) showBufferingChip('Buffering… ' + seconds + 's (stabilising)');
     }
   });
   var health = new StreamHealth();
@@ -193,6 +202,17 @@
     var deadCount = 0;
     allChannels = allChannels.filter(function(c) { if (health.isDead(c.url)) { deadCount++; return false; } return true; });
     if (deadCount) console.info('Filtered ' + deadCount + ' dead channels from cache.');
+    // Apply cached https:// upgrades for http:// streams (mixed content).
+    var upgraded = 0;
+    allChannels.forEach(function(c) {
+      var h = health.cache[c.url];
+      if (h && h.upgraded) { c.url = h.upgraded; upgraded++; }
+    });
+    var seenUps = new Set();
+    allChannels = allChannels.filter(function(c) {
+      if (seenUps.has(c.url)) return false; seenUps.add(c.url); return true;
+    });
+    if (upgraded) console.info('Upgraded ' + upgraded + ' http:// streams to https://.');
     // Assign channel numbers (IPTV-style presets)
     allChannels.forEach(function(c, i) { c.pnr = i + 1; });
     hideLoadingUI();
@@ -333,8 +353,11 @@
     if (els.btnBackLoading) els.btnBackLoading.classList.remove('hidden');
   }
 
-  function showBufferingChip() {
-    if (els.bufferingChip) els.bufferingChip.classList.remove('hidden');
+  function showBufferingChip(text) {
+    if (!els.bufferingChip) return;
+    var label = els.bufferingChip.querySelector('span');
+    if (label && text) label.textContent = text;
+    els.bufferingChip.classList.remove('hidden');
   }
   function hideBufferingChip() {
     if (els.bufferingChip) els.bufferingChip.classList.add('hidden');
