@@ -19,6 +19,7 @@
     channelGroup: document.getElementById('channel-group'),
     loadingOverlay: document.getElementById('loading-overlay'),
     btnBackLoading: document.getElementById('btn-back-loading'),
+    bufferingChip: document.getElementById('buffering-chip'),
     errorOverlay: document.getElementById('error-overlay'),
     errorMessage: document.getElementById('error-message'),
     btnRetry: document.getElementById('btn-retry'),
@@ -68,6 +69,9 @@
   var isFavoritesOnly = false;
   var zapBuffer = '';
   var zapTimer = null;
+  var playStarted = false;      // this channel reached 'playing' at least once
+  var loadWatchdog = null;      // first-load stall watchdog timer
+  var watchdogReloaded = false; // one automatic stream reload already attempted
   var DEFAULT_GROUPS = ['Soccer ⚽ (Free)', 'Sports', 'News', 'USA', 'UK', 'Canada', 'General', 'Unknown'];
 
   async function init() {
@@ -131,13 +135,30 @@
     if (els.btnFavoritePlayer) els.btnFavoritePlayer.addEventListener('click', function() {
       if (player.currentChannel) { toggleFavorite(player.currentChannel.id); updateFavoriteButton(); }
     });
-    els.video.addEventListener('playing', function() { hideLoading(); hideError(); showControls(); updateDiag(); try { settings.setLastChannel(player.currentChannel ? player.currentChannel.id : null); } catch(e) {} });
+    els.video.addEventListener('playing', function() {
+      playStarted = true;
+      hideLoading(); hideError(); hideBufferingChip();
+      clearLoadWatchdog(); showControls(); updateDiag();
+      try { settings.setLastChannel(player.currentChannel ? player.currentChannel.id : null); } catch(e) {}
+    });
     els.video.addEventListener('loadedmetadata', function() { updateDiag(); });
     els.video.addEventListener('pause', function() { updatePlayPauseIcon(); });
-    els.video.addEventListener('waiting', function() { showLoading(); });
-    els.video.addEventListener('canplay', function() { hideLoading(); });
+    els.video.addEventListener('waiting', function() {
+      // Full-screen spinner only before the first frame; afterwards buffers
+      // get a small non-blocking chip so picture and controls stay usable.
+      if (playStarted) showBufferingChip();
+      else showLoading(); // pre-first-frame stall: keep the loading screen up
+    });
+    els.video.addEventListener('canplay', function() {
+      hideBufferingChip();
+      if (!playStarted) hideLoading();
+    });
     els.video.addEventListener('ended', function() { closePlayer(); });
-    els.video.addEventListener('error', function(e) { hideLoading(); var err = els.video.error; showPlayerError('Video error: ' + (err ? err.message : 'Unknown')); });
+    els.video.addEventListener('error', function(e) {
+      hideLoading(); hideBufferingChip(); clearLoadWatchdog();
+      var err = els.video.error;
+      showPlayerError(streamErrorMessage(err));
+    });
     els.playerOverlay.addEventListener('mousemove', function() { showControls(); });
     els.playerOverlay.addEventListener('mouseleave', function() { hideControls(); });
 
@@ -286,12 +307,68 @@
 
   function playChannel(channel) {
     if (!channel) return;
+    playStarted = false;
+    watchdogReloaded = false;
+    hideBufferingChip();
+    showLoading('Loading ' + (channel.name || 'channel') + '…');
+    armLoadWatchdog(channel);
     player.play(channel);
     els.channelTitle.textContent = (channel.pnr ? channel.pnr + ' · ' : '') + channel.name;
     els.channelGroup.textContent = channel.group || 'General';
     if (channel.logo) { els.channelLogo.src = channel.logo; els.channelLogo.style.display = 'block'; } else { els.channelLogo.style.display = 'none'; }
     updateFavoriteButton();
     closeSearch(); closeSettings(); els.playerOverlay.classList.remove('hidden'); showControls(); currentFocusIndex = -1;
+  }
+
+  /* ----------------------------------------------------------------
+   * Loading / buffering states.
+   * - First load (before the first frame): full-screen spinner, with a
+   *   watchdog that auto-reloads a stalled stream once, then errors.
+   * - Mid-playback stalls: small non-blocking "Buffering…" chip.
+   * ---------------------------------------------------------------- */
+  function showLoading(tagline) {
+    var p = els.loadingOverlay.querySelector('p');
+    if (p && tagline) p.textContent = tagline;
+    els.loadingOverlay.classList.remove('hidden');
+    if (els.btnBackLoading) els.btnBackLoading.classList.remove('hidden');
+  }
+
+  function showBufferingChip() {
+    if (els.bufferingChip) els.bufferingChip.classList.remove('hidden');
+  }
+  function hideBufferingChip() {
+    if (els.bufferingChip) els.bufferingChip.classList.add('hidden');
+  }
+
+  function armLoadWatchdog(channel) {
+    clearLoadWatchdog();
+    loadWatchdog = setTimeout(function() {
+      if (playStarted || !player.currentChannel || player.currentChannel.url !== channel.url) return;
+      hideLoading();
+      if (!watchdogReloaded) {
+        // Try one automatic reload — cheap recovery for transient stalls.
+        watchdogReloaded = true;
+        showLoading('Stream stalled — retrying…');
+        player.play(channel);
+        armLoadWatchdog(channel);
+      } else {
+        showPlayerError('"' + channel.name + '" is not responding.\n\nIt may be offline right now, or geo-fenced to a region your connection can\'t reach. Try another channel — and run Settings → Scan & Remove Dead Streams later to clear dead ones.');
+      }
+    }, 15000);
+  }
+  function clearLoadWatchdog() {
+    if (loadWatchdog) { clearTimeout(loadWatchdog); loadWatchdog = null; }
+  }
+
+  /** Human-readable message for common video / HLS errors. */
+  function streamErrorMessage(err) {
+    if (err) {
+      if (err.code === 4) return 'This stream is not supported by your browser or has moved. The health scanner will mark it dead on the next scan.';
+      if (err.code === 3) return 'Playback failed while decoding this stream. Try another channel.';
+      if (err.code === 2) return 'Network error while loading the stream. Check your connection.';
+      if (err.code === 1) return 'Loading was aborted.';
+    }
+    return 'Failed to load stream. The channel may be offline or geo-fenced right now.';
   }
 
   function updateFavoriteButton() {
@@ -323,6 +400,9 @@
 
   function closePlayer() {
     player.pause();
+    clearLoadWatchdog();
+    playStarted = false;
+    hideBufferingChip();
     els.playerOverlay.classList.add('hidden');
     hideControls(); hideLoading(); hideError();
     // Return keyboard/remote focus to the last-watched channel card
@@ -335,7 +415,6 @@
       }
     } catch (e) {}
   }
-  function showLoading() { els.loadingOverlay.classList.remove('hidden'); if (els.btnBackLoading) els.btnBackLoading.classList.remove('hidden'); }
   function hideLoading() { els.loadingOverlay.classList.add('hidden'); }
   function showPlayerError(msg) { hideLoading(); els.errorMessage.textContent = msg || 'Failed to load stream.'; els.errorOverlay.classList.remove('hidden'); }
   function hideError() { els.errorOverlay.classList.add('hidden'); }

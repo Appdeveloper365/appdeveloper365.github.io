@@ -571,3 +571,36 @@ textarea:focus { border-color: var(--accent); outline: var(--focus-ring); }
   padding: 60px 20px;
   color: var(--text-dim);
 }
+/* ==========================================================================
+   Buffering chip — non-blocking stall indicator over the playing video
+   ========================================================================== */
+
+.buffering-chip {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  z-index: 1200;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(0,0,0,0.72);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 8px 16px 8px 10px;
+  color: var(--text-main);
+  font-size: 0.85rem;
+  pointer-events: none;
+}
+.buffering-chip.hidden { display: none !important; }
+
+.mini-spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(79,195,247,0.25);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+/* Error messages are multi-line (offline / geo-fence hints) */
+.error-overlay p { white-space: pre-line; max-width: 70%; line-height: 1.6; }
