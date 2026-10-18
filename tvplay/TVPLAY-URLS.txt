@@ -1,0 +1,27 @@
+TVPlay - Quick Reference URLs
+=============================================
+
+Web App (PWA - installable, TV-compatible)
+  https://appdeveloper365.github.io/tvplay/
+
+IPTV Playlists (paste into TiviMate / VLC / IPTV Smarters / Kodi)
+  Sports (worldwide, free FTA + FAST:  Soccer + 5 regional groups)
+    https://appdeveloper365.github.io/tvplay/assets/sports-world.m3u
+  News (worldwide, free news channels: Global + 5 regional groups)
+    https://appdeveloper365.github.io/tvplay/assets/news-world.m3u
+
+Source Repository
+  https://github.com/Appdeveloper365/TvPlay
+
+Offline APK build guide
+  see apk/BUILD-APK.md in the repo (Capacitor wrapper)
+
+Local testing (this Mac)
+  App:      http://localhost:8210
+  Network:  http://<mac-ip>:8210   (get IP with: ipconfig getifaddr en0)
+  Start:    cd /Users/bt/Downloads/TV && python3 -m http.server 8210 --bind 0.0.0.0
+
+Maintenance
+  - Reload the app once after each deploy (service worker cache bump).
+  - Settings -> "Scan & Remove Dead Streams" prunes dead channels.
+  - Playlists you add in Settings load unfiltered (your sources, your call).
