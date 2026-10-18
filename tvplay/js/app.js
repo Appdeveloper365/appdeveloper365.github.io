@@ -83,6 +83,33 @@
   var watchdogReloaded = false; // one automatic stream reload already attempted
   var DEFAULT_GROUPS = ['Soccer ⚽ (Free)', 'Sports', 'News', 'USA', 'UK', 'Canada', 'General', 'Unknown'];
 
+  /**
+   * Subscription-only sports brands whose "online" streams only exist as
+   * unauthorized relays. They either never serve video to browsers or
+   * inject ad/redirect splash screens (endless buffering + privacy risk).
+   * beIN SPORTS XTRA is beIN's own free channel and stays allowed.
+   */
+  var PAY_CHANNEL_PATTERNS = [
+    /beIN\s*Sports(?!\s*XTRA)/i,        // beIN MENA/Türkiye pay tiers, incl. numbered + Haber
+    /sky\s*sports/i, /TNT\s*Sports/i, /DAZN/i, /canal\+?\s*sport/i,
+    /\bespn\b(?!.*digital)/i, /fox\s*sports/i,
+    /arena\s*sport/i, /spor\s*tv\s*\d/i, /eleven\s*sports/i, /eurosport/i,
+    /setanta/i, /okko/i, /match\s*!(\s|\w)/i, /match\s*premier/i, /match\s*arena/i,
+    /\bc\s*more\b/i, /viaplay/i, /\bsupersport\b/i, /astro\s*(supersport)?\b/i,
+    /premier\s*sports/i, /fight\s*network/i,
+    /nba\s*tv\b/i, /mlb\s*network/i, /nhl\s*network/i,
+    /tennis\s*channel/i, /golf\s*channel/i, /cbs\s*sports\s*network/i
+  ];
+  const PAY_BLOCKED = new Set(); // de-dup log
+
+  function isPayChannel(name) {
+    if (!name) return false;
+    for (var i = 0; i < PAY_CHANNEL_PATTERNS.length; i++) {
+      if (PAY_CHANNEL_PATTERNS[i].test(name)) return true;
+    }
+    return false;
+  }
+
   async function init() {
     try {
       applyStoredSettings();
@@ -190,6 +217,12 @@
       var source = sources[i];
       try {
         var channels = await PlaylistParser.fetch(source.url);
+        var paySkipped = 0;
+        channels = channels.filter(function(c) {
+          if (isPayChannel(c.name)) { paySkipped++; PAY_BLOCKED.add(c.name); return false; }
+          return true;
+        });
+        if (paySkipped) console.info(source.name + ': filtered out ' + paySkipped + ' pay-channel relays.');
         channels.forEach(function(c) { if (!c.group) c.group = source.group || 'General'; if (!c.id) c.id = PlaylistParser.makeId(c.name); });
         allChannels = allChannels.concat(channels);
       } catch (e) { errors.push(source.name + ': ' + e.message); }
