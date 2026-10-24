@@ -23,6 +23,7 @@
         <h1 id="app-title">TVPlay</h1>
       </div>
       <div class="header-right">
+        <button id="btn-trim" class="icon-btn" aria-label="Trim Studio" title="Trim Studio">&#9986;</button>
         <button id="btn-settings" class="icon-btn" aria-label="Settings" title="Settings">&#9881;</button>
       </div>
     </header>
@@ -137,11 +138,85 @@
     </div>
   </div>
 
+  <!-- Trim Studio Overlay -->
+  <div id="trim-overlay" class="trim-overlay hidden" role="dialog" aria-modal="true" aria-label="Trim Studio">
+    <div class="trim-header">
+      <h2>&#9986; Trim Studio</h2>
+      <button id="btn-trim-close" class="icon-btn" aria-label="Close">&#10006;</button>
+    </div>
+
+    <div class="trim-body">
+      <!-- Step 1: choose a source -->
+      <div id="trim-source" class="trim-source">
+        <h3>1 · Choose a clip source</h3>
+        <div class="trim-src-actions">
+          <button id="btn-trim-record" class="primary-btn">&#9209; Record active stream</button>
+          <button id="btn-trim-loadfile" class="primary-btn">&#128193; Load video file</button>
+          <input type="file" id="trim-file" accept="video/*" hidden>
+        </div>
+        <p class="trim-hint">Recording captures the channel currently open in the player (video + audio, what you see is what you get). Or load any video saved on this device.</p>
+      </div>
+
+      <!-- recording bar -->
+      <div id="trim-record-bar" class="trim-record-bar hidden">
+        <span class="rec-dot"></span> REC <b id="trim-rec-elapsed">00:00</b>
+        <button id="btn-trim-stop-record" class="primary-btn">&#9209; Stop &amp; Trim</button>
+      </div>
+
+      <!-- Step 2+3: editor -->
+      <div id="trim-editor" class="trim-editor hidden">
+        <h3>2 · Trim</h3>
+        <div id="trim-stage" class="trim-stage">
+          <video id="trim-video" playsinline controls preload="metadata"></video>
+        </div>
+        <div class="trim-codes">
+          <span>IN <b id="tc-in">--:--</b></span>
+          <span>OUT <b id="tc-out">--:--</b></span>
+          <span>LEN <b id="tc-dur">--:--</b></span>
+          <span id="tc-pos" class="tc-pos">--:--</span>
+        </div>
+
+        <div id="trim-ruler-wrap" class="trim-ruler-wrap">
+          <canvas id="trim-ruler"></canvas>
+        </div>
+
+        <div class="trim-markers">
+          <button id="btn-nudge-in-minus" class="icon-btn" title="IN −0.5s">&#9664;&#9664; IN</button>
+          <button id="btn-trim-to-in" class="secondary-btn" title="Jump to IN">&#8987; IN</button>
+          <button id="btn-trim-set-in" class="primary-btn" title="Set IN at playhead">&#9195; Set IN</button>
+          <button id="btn-nudge-in-plus" class="icon-btn" title="IN +0.5s">IN &#9654;&#9654;</button>
+          <button id="btn-nudge-out-minus" class="icon-btn" title="OUT −0.5s">&#9664;&#9664; OUT</button>
+          <button id="btn-trim-set-out" class="primary-btn" title="Set OUT at playhead">Set OUT &#9195;</button>
+          <button id="btn-trim-to-out" class="secondary-btn" title="Jump to OUT">OUT &#8987;</button>
+          <button id="btn-nudge-out-plus" class="icon-btn" title="OUT +0.5s">OUT &#9654;&#9654;</button>
+        </div>
+
+        <div class="trim-transport">
+          <button id="btn-trim-play" class="primary-btn">&#9654; Preview clip</button>
+          <button id="btn-trim-pause" class="secondary-btn">&#9208; Pause</button>
+          <label class="trim-loop-label"><input type="checkbox" id="chk-loop" checked> Loop preview</label>
+          <button id="btn-trim-zoom-out" class="icon-btn" title="Zoom out timeline">&#128269;&#8722;</button>
+          <button id="btn-trim-zoom-in" class="icon-btn" title="Zoom in timeline">&#128269;&#43;</button>
+        </div>
+
+        <h3>3 · Download</h3>
+        <div id="trim-export-row" class="trim-export-row">
+          <button id="btn-trim-export" class="primary-btn">&#11015; Download Clip</button>
+          <div class="trim-progress"><div id="trim-export-bar" class="trim-progress-bar"></div></div>
+        </div>
+        <button id="btn-trim-reset" class="secondary-btn">Choose a different source</button>
+      </div>
+
+      <p id="trim-status" class="trim-status"></p>
+    </div>
+  </div>
+
   <script src="lib/hls.min.js"></script>
   <script src="js/playlist.js"></script>
   <script src="js/channels.js"></script>
   <script src="js/settings.js"></script>
   <script src="js/health.js"></script>
+  <script src="js/trim.js"></script>
   <script src="js/player.js"></script>
   <script src="js/app.js"></script>
 
