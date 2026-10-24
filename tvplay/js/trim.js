@@ -91,6 +91,7 @@
     if (state.srcUrl) { URL.revokeObjectURL(state.srcUrl); state.srcUrl = null; }
     state.srcKind = null; state.duration = 0;
     state.tIn = 0; state.tOut = -1;
+    els.stage.classList.remove('ready');
     els.editor.classList.add('hidden');
     els.source.classList.remove('hidden');
     els.video.removeAttribute('src');
@@ -191,8 +192,9 @@
     els.source.classList.add('hidden');
     els.editor.classList.remove('hidden');
     els.recordBar.classList.add('hidden');
+    els.stage.classList.add('ready');
     status('Clip: 00:00 – ' + fmt(state.duration) + ' · drag the handles, or reposition with Playhead buttons.');
-    drawRuler();
+    layoutRuler();
     updateTimecodes();
   }
 
