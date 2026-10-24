@@ -223,15 +223,20 @@ class Player {
     }
   }
 
+  /**
+   * Full restart of the current channel. Re-uses play() so the correct
+   * engine is rebuilt: a fresh Hls instance on MSE browsers, or a direct
+   * src on native-HLS browsers. A raw m3u8 src on an MSE browser would
+   * just fail — always re-route through play().
+   */
   reloadVideo() {
     if (this.reloading || !this.currentChannel) return;
     this.reloading = true;
+    const ch = this.currentChannel;
     setTimeout(() => {
       this.reloading = false;
-      if (!this.currentChannel) return;
-      this.video.src = this.currentChannel.url;
-      this.video.load();
-      this.video.play().catch(() => {});
+      if (!this.currentChannel || this.currentChannel !== ch) return;
+      this.play(ch);
     }, 800);
   }
 

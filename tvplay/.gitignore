@@ -1,0 +1,9 @@
+# .gitignore — TVPlay
+.claude/
+.DS_Store
+*.log
+tvplay-site.zip
+apk/node_modules/
+apk/android/
+apk/platforms/
+apk/plugins/

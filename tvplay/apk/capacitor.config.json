@@ -1,0 +1,12 @@
+{
+  "appId": "com.personal.tvplay",
+  "appName": "TVPlay",
+  "webDir": "..",
+  "server": {
+    "androidScheme": "https",
+    "cleartext": true
+  },
+  "android": {
+    "allowsArbitraryLoads": true
+  }
+}

@@ -24,10 +24,12 @@
     tOut: -1,
     zoomIndex: 3,        // px per second → ZOOMS
     loop: true,
-    dragging: null,      // 'in' | 'out' | null
+    dragging: null,      // 'in' | 'out' | 'seek' | null
     exporting: false,
+    recExport: null,     // MediaRecorder of the export render
     rec: null, recChunks: [], recTimer: null, recStart: 0,
-    prevMutedSave: null
+    prevMutedSave: null,
+    wasPlaying: false
   };
 
   var ZOOMS = [2, 3, 6, 10, 20, 40, 80]; // px per second
@@ -49,7 +51,7 @@
   }
   function status(msg) { els.status.textContent = msg || ''; }
 
-  function pickMime(withAudioHintOnlyNone) {
+  function pickMime() {
     var candidates = [
       'video/webm;codecs=vp9,opus',
       'video/webm;codecs=vp8,opus',
@@ -88,6 +90,7 @@
   }
 
   function resetSource() {
+    if (state.exporting) { status('Rendering in progress — stop it first.'); return; }
     if (state.srcUrl) { URL.revokeObjectURL(state.srcUrl); state.srcUrl = null; }
     state.srcKind = null; state.duration = 0;
     state.tIn = 0; state.tOut = -1;
@@ -367,6 +370,7 @@
     status('Rendering clip… (runs in real time — ' + fmt(state.tOut - state.tIn) + ')');
 
     v.currentTime = state.tIn;
+    state.prevMutedSave = v.muted;
     v.muted = false;
 
     var onReady = function () {
@@ -378,12 +382,17 @@
       } catch (e) {
         state.exporting = false; setExportUI(false); status('Export failed: ' + e.message); return;
       }
+      state.recExport = rec;
       var chunks = [];
       rec.ondataavailable = function (ev) { if (ev.data && ev.data.size) chunks.push(ev.data); };
       rec.onstop = function () {
+        var aborted = !state.exporting;   // abortExport flipped it before stopping
         state.exporting = false;
+        state.recExport = null;
         setExportUI(false);
         v.pause();
+        if (state.prevMutedSave !== null) { v.muted = state.prevMutedSave; state.prevMutedSave = null; }
+        if (aborted) { status('Rendering stopped — nothing was saved.'); return; }
         var blob = new Blob(chunks, { type: rec.mimeType || 'video/webm' });
         if (!blob.size) { status('Export produced empty data — try a slightly later IN point.'); return; }
         downloadBlob(blob);
@@ -402,7 +411,7 @@
       v.addEventListener('timeupdate', watch);
       rec.start(1000);
       v.play();
-      status('Rendering… you can leave the preview paused-the-export keeps rendering frames.');
+      status('Rendering… rendering continues even if the preview is paused.');
     };
     if (v.seeking) {
       v.addEventListener('seeked', function once() { v.removeEventListener('seeked', once); onReady(); }, { once: true });
@@ -413,9 +422,11 @@
 
   function abortExport() {
     if (!state.exporting) return;
-    state.exporting = false;
+    state.exporting = false;          // onstop checks this → discards data, no download
+    if (state.recExport) { try { state.recExport.stop(); } catch (e) {} state.recExport = null; }
     setExportUI(false);
     els.video.pause();
+    if (state.prevMutedSave !== null) { els.video.muted = state.prevMutedSave; state.prevMutedSave = null; }
     status('Rendering stopped — nothing was saved. Adjust handles and try again.');
   }
 

@@ -169,7 +169,7 @@
     els.btnClearSearch.addEventListener('click', function() { clearSearch(); });
     els.searchInput.addEventListener('input', function(e) { filterBySearch(e.target.value); });
     els.btnFavorites.addEventListener('click', function() { isFavoritesOnly = !isFavoritesOnly; els.btnFavorites.classList.toggle('active', isFavoritesOnly); renderChannels(); });
-    if (els.btnHealthScan) els.btnHealthScan.addEventListener('click', function() { runHealthScan(false); });
+    if (els.btnHealthScan) els.btnHealthScan.addEventListener('click', function() { runHealthScan(true); });
     if (els.btnExportM3u8) els.btnExportM3u8.addEventListener('click', function() { exportPlaylist(); });
     els.btnFavoritePlayer = document.getElementById('btn-favorite-channel');
     if (els.btnFavoritePlayer) els.btnFavoritePlayer.addEventListener('click', function() {
@@ -319,6 +319,7 @@
     var channels = allChannels;
     if (currentCategory === 'Favorites') { channels = channels.filter(function(c) { return isFavorite(c.id); }); }
     else if (currentCategory !== 'All') { channels = channels.filter(function(c) { return (c.group || 'General') === currentCategory; }); }
+    if (isFavoritesOnly) { channels = channels.filter(function(c) { return isFavorite(c.id); }); }
     var search = els.searchInput.value.toLowerCase().trim();
     if (search) { channels = channels.filter(function(c) { return c.name.toLowerCase().indexOf(search) !== -1; }); }
     filteredChannels = channels;
@@ -364,7 +365,14 @@
   function toggleSearch() { var show = els.searchBox.style.display === 'none'; els.searchBox.style.display = show ? 'block' : 'none'; if (show) els.searchInput.focus(); }
   function closeSearch() { els.searchBox.style.display = 'none'; els.searchInput.value = ''; try { els.searchInput.blur(); } catch (e) {} }
 
-  function escapeHtml(text) { var div = document.createElement('div'); div.textContent = text; return div.innerHTML; }
+  // Escapes text for BOTH element content and double-quoted attribute
+  // contexts (innerHTML alone does not escape quotes, which allowed a
+  // crafted playlist to break out of data-group/aria-label attributes).
+  function escapeHtml(text) {
+    var s = String(text == null ? '' : text);
+    return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+            .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+  }
 
   function playChannel(channel) {
     if (!channel) return;
@@ -451,15 +459,6 @@
     if (idx === -1) idx = 0;
     var next = (idx + delta + allChannels.length) % allChannels.length;
     playChannel(allChannels[next]);
-  }
-
-  /**
-   * Zap by preset number (IPTV channel number).
-   * @param {number} n 1-based
-   */
-  function zapToNumber(n) {
-    if (!n || n < 1 || n > 9999) return null;
-    return allChannels[n - 1] || null;
   }
 
   function closePlayer() {
@@ -555,7 +554,13 @@
   }
 
   function handleGlobalKeydown(e) {
-    if (document.activeElement.tagName === 'INPUT' || document.activeElement.tagName === 'TEXTAREA') { if (e.key === 'Escape') document.activeElement.blur(); return; }
+    // Trim Studio is a modal workbench — global player/grid shortcuts
+    // must not fire underneath it (zap/space/… would act on hidden UI).
+    if (els.diagOverlay && !els.diagOverlay.classList.contains('hidden')) { if (e.key === 'Escape') els.diagOverlay.classList.add('hidden'); return; }
+    var trimOverlay = document.getElementById('trim-overlay');
+    if (trimOverlay && !trimOverlay.classList.contains('hidden')) { if (e.key === 'Escape') document.getElementById('btn-trim-close').click(); return; }
+    var ae = document.activeElement;
+    if (ae && (ae.tagName === 'INPUT' || ae.tagName === 'TEXTAREA')) { if (e.key === 'Escape') ae.blur(); return; }
     var inPlayer = !els.playerOverlay.classList.contains('hidden');
     var inSettings = !els.settingsPanel.classList.contains('hidden');
     if (inSettings) { if (e.key === 'Escape') closeSettings(); return; }
@@ -571,7 +576,9 @@
       case 'ArrowRight': e.preventDefault(); var colsR = Math.floor(els.channelGrid.offsetWidth / 260) || 3; currentFocusIndex = (currentFocusIndex + colsR < cards.length) ? currentFocusIndex + colsR : Math.min(currentFocusIndex + 1, cards.length - 1); focusCard(cards[currentFocusIndex]); break;
       case 'ArrowLeft': e.preventDefault(); var colsL = Math.floor(els.channelGrid.offsetWidth / 260) || 3; currentFocusIndex = (currentFocusIndex - colsL >= 0) ? currentFocusIndex - colsL : Math.max(currentFocusIndex - 1, 0); focusCard(cards[currentFocusIndex]); break;
       case 'Enter': case ' ': e.preventDefault(); if (cards[currentFocusIndex]) { var idx = parseInt(cards[currentFocusIndex].dataset.index, 10); playChannel(filteredChannels[idx]); } break;
-      case 'Backspace': case 'Escape': e.preventDefault(); closePlayer(); break;
+      case 'Backspace': case 'Escape':
+        if (els.searchBox.style.display !== 'none') { e.preventDefault(); closeSearch(); }
+        break;
     }
   }
 
